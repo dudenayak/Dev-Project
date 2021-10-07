@@ -1,6 +1,6 @@
 # Contribution Guidelines
 
-_Welcome hackers! It is **awesome** to have you here! Before you start contributing with this project make sure you read our [Code Of Conduct](https://github.com/dudenayak/Dev-Project/blob/contributing_file/CODE_OF_CONDUCT.md), it is really important to make this inclusive and open to everyone, otherwise, it would not be awesome_
+_Welcome hackers! It is **awesome** to have you here! Before you start contributing with this project make sure you read our [Code Of Conduct](https://github.com/dudenayak/Dev-Project/blob/main/CODE_OF_CONDUCT.md), it is really important to make this inclusive and open to everyone, otherwise, it would not be awesome_
 This repository was created to help developers get started with Open Source during [Hacktoberfest](https://hacktoberfest.digitalocean.com/).
 
 ## Have you found some awesome repositories participating in Hacktoberfest?
@@ -10,10 +10,10 @@ Add them to this list so others can find it too and start contributing, however,
 
 ## Submitting a pull request
 
-1. [Fork](https://github.com/OtacilioN/awesome-hacktoberfest-2018/fork) and clone the repository.
+1. [Fork](https://github.com/dudenayak/Dev-Project/fork) and clone the repository.
 1. Create a new branch: `git checkout -b my-branch-name`.
 1. Add your item in alphabetical order in a section or create a new section, if you are not sure about the appropriate section you can open an `issue` to discuss with the community.
-1. Push to your fork and [submit a pull request](https://github.com/OtacilioN/awesome-hacktoberfest-2018/compare).
+1. Push to your fork and [submit a pull request](https://github.com/dudenayak/Dev-Project/compare).
 > Tips: Make sure that you are submitting and committing things that are of quality substance, otherwise maintainers can invalidate your pull request
 > There are a lot of good websites that you can research before opening a request instead of just writing "cool" or "Hello World"
 5. Pat yourself on the back and wait for your `pull request` to be reviewed and merged.
