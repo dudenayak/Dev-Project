@@ -1,0 +1,96 @@
+#navbar{
+        font-family: 'Baloo Bhai 2', cursive;
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: 0px;
+        flex-direction: column;
+}
+#navbar ul li a{
+    font-size: 1rem;
+    padding: 0px 6px;
+    padding-bottom: 7px;
+}
+#home{
+    height: 285px;
+    padding: 2px 20px;
+}
+#home::before{
+    height: 400px;
+    opacity: 0.8;
+}
+#home p{
+    font-size: 12px;
+}
+.h-primary{
+    font-size: 2rem;
+}
+#services{
+    flex-direction: column;
+}
+#services .box{
+    width: auto;
+} 
+#services .box p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.7rem;
+}
+.btn{
+    padding: 4px 8px;
+    font-size: 13px;
+    margin: 10px;
+}
+.clients-item{
+    padding: 5px 8px;
+}
+#clients img{
+    height: 40px;
+}
+#clients-section{
+    position: relative;
+    height: 140px; 
+}
+#contact-box{
+    /* width: 80%; */
+    padding: 0px;
+    
+}
+.btn1{
+    width:50%;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 5px;
+    padding: 0.3rem;
+    border-radius: 0px;
+    border: 0.8px solid black;
+}
+footer{
+    background: black;
+    color: white;
+    padding: 8px 12px; 
+    font-size: 0.7rem;
+}
+#contact-box input{
+    width: 100%;
+    background-color: rgba(240, 240, 240, 0);
+    color: black;
+    border: none;
+    border-radius: 0px;
+    padding: 0px;
+    font-size: 12px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    outline: none;
+}
+#contact-box textarea{
+    width: 100%;
+    color: black;
+    border: none;
+    border-radius: 0px;
+    padding: 0px;
+    font-size: 12px;
+    border: 1px solid rgb(0, 0, 0);
+    outline: none;
+}
+#contact-box label{
+    font-size: 0.8rem;
+    font-family: 'Poppins', sans-serif;
+}
