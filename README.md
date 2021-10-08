@@ -7,7 +7,7 @@
  <a href="https://github.com/dudenayak" ><img src="https://img.shields.io/badge/Contributions-welcome-violet.svg?style=flat&logo=git" alt="Contributions" /></a>
 <a href="https://github.com/dudenayak/Dev-Project/pulls"><img src="https://img.shields.io/github/issues-pr/dudenayak/Dev-Project" alt="Pull Requests Badge"/></a>
 <a href="https://github.com/dudenayak/Dev-Project/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/dudenayak/Dev-Project?color=2b9348"></a>
-
+</div>
 
 
 ### 🗣 HacktoberFest encourages participation in the open source community, which grows bigger every year. Complete the 2021 challenge and earn a limited edition T-shirt.
@@ -40,9 +40,5 @@ Steps for adding commit are mentioned below:
     4. Go to the folder in which you want to contribute.
     5. Then add your file with a dedicated name.
     6. Then create pull request in a new branch.
-
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 Only contributions of development is acceptable.
