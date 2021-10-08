@@ -1,0 +1,229 @@
+/* CSS reset */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variable */
+:root{
+    --navbar-height:60px;
+}
+#navbar{
+    font-family: 'Baloo Bhai 2', cursive;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+#navbar::before{
+    content: "";
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    top: 0px;
+    left: 0px;
+    height: 92%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+#logo{
+    margin: 4px 28px;
+}
+#logo img{
+    border-radius: 30px;
+    height: 45px;
+    margin: 3px 6px;
+}
+#navbar ul{
+    display: flex;
+}
+#navbar ul li{
+    /* color: white; */
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 23px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+#navbar ul li a:hover{
+    color: rgb(134, 128, 128);
+}
+
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 416px;
+    justify-content: center;
+    align-items: center;
+}
+#home::before{
+    content: "";
+    background: url('../img/background.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 80%;
+    width: 100%;
+    z-index: -2;
+    opacity: 0.95;
+}
+#home h1{
+    color: white;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+#p-primary{
+    color: white;
+    /* font-size: 1.2rem; */
+    text-align: center;
+    /* font-family: 'Ubuntu', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+}
+.h-primary{
+    font-size: 4rem;
+    padding: 12px;
+}
+.btn{
+    padding: 5px 20px;
+    color: black;
+    background-color: #ffb435;
+    /* border: 2px solid #00090b; */
+    border: none;
+    margin: 17px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#services-container h1{
+    margin: auto;
+    font-family: 'Playfair Display', serif;
+}
+.h1-primary{
+    font-size: 2rem;
+    padding: 22px;
+    text-align: center;
+}
+.h1-secondary{
+    padding: 7px;
+    font-family: 'Baloo Bhai 2', cursive;
+
+    font-size: 2.1rem;
+}
+#services{
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+}
+#services .box{
+    border: 2px solid rgb(155, 77, 4);
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    width: 350px;
+    /* height: 250px; */
+    margin: 0px 15px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    background-color: rgb(238, 213, 180);
+} 
+#services .box img{
+    height: 120px;
+    margin: auto;
+    display: block;
+}
+#services .box p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+}
+#clients-section{
+    position: relative;
+    height: 237px; 
+}
+#clients{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#clients img{
+    height: 110px;
+}
+#clients-section .h-primary{
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    padding: 15px;
+    font-size: 2.1rem;
+}
+.clients-item{
+    padding: 10px 20px;
+}
+#clients::before{
+    content: "";
+    position: absolute;
+    background: url('../img/4.jpg') no-repeat center center/cover;
+    height: 95%;
+    width: 100%;
+    z-index: -3;
+    opacity: 0.35;
+    bottom: 0px;
+}
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    background: url('../img/6.jpg') no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    z-index: -4;
+    opacity: 0.35;
+    bottom: 0px;
+}
+#contact .h3-primary{
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    padding: 15px;
+    font-size: 2.1rem;
+}
+footer{
+    background: black;
+    color: white;
+    padding: 8px 12px; 
+}
+.center{
+    text-align: center;
+}
+#contact-box{
+    display: flex;
+    /* text-align: center; */
+    align-items: center;
+    justify-content: center;
+    padding: 35px;
+}
+#contact-box input, #contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 0.8px solid black;
+}
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+}
+.btn1{
+    width:20%;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 0.8px solid black;
+}
