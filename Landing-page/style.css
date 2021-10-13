@@ -42,8 +42,8 @@ p {
 	text-align: center;
 }
 .cta {
-	align-self: center;
-	display: inline-block;
+	display: flex;
+	justify-content: center;
 	padding: 10px 80px;
 	color: white;
 	background-color: transparent;
@@ -51,8 +51,8 @@ p {
 	font-size: 2rem;
 	text-transform: uppercase;
 	letter-spacing: .1rem;
+	margin: auto;
 	margin-top: 30px;
-	margin-left: 220px;
 	transition-property: background-color, color;
 }
 .cta:hover {
@@ -60,8 +60,9 @@ p {
 	background-color: #b53a25;
 }
 h4{
-font-size: 3rem;
-color: white;
+	font-size: 3rem;
+	color: white;
+	text-align: center;
 }
 .brand h1 {
 	font-size: 3rem;

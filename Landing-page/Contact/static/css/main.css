@@ -1,40 +1,37 @@
-main
-{
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 90%;
     margin: auto;
+    background: hsla(0, 0%, 100%, 0.29);
+
 }
 
-.title
-{
+.title {
     font-size: 50px;
     font-weight: bold;
-    padding: 1.5% 0;
+    padding: 30px;
 }
 
-.title-info
-{
+.title-info {
 	padding-bottom: 2%;
 }
 
-.form
-{
+.form {
     display: flex;
     flex-direction: column;
     width: 60%;
     padding: 2%;
 }
 
-.input-group, .textarea-group
-{
+.input-group, .textarea-group {
     padding: 1% 0;
 }
 
-input, textarea
-{
+input, 
+textarea {
     color: inherit;
     width: 100%;
     background-color: transparent;
@@ -44,20 +41,19 @@ input, textarea
     font-size: 20px;
 }
 
-input:focus, textarea:focus
-{
+input:focus, 
+textarea:focus {
     background-color: transparent;
     outline: transparent;
     border-bottom: 2px solid #69f0ae;
 }
 
-input::placeholder, textarea::placeholder
-{
+input::placeholder, 
+textarea::placeholder {
     color: transparent;
 }
 
-label
-{
+label {
     color: #757575;
     position: relative;
     left: 0.5em;
@@ -66,28 +62,26 @@ label
     transition: 0.3s ease all;
 }
 
-input:focus ~ label, input:not(:placeholder-shown) ~ label
-{
+input:focus ~ label, 
+input:not(:placeholder-shown) ~ label {
     top: -4em;
     color: #69f0ae;
     font-size: 15px;
 }
 
-textarea:focus ~ label, textarea:not(:placeholder-shown) ~ label
-{
+textarea:focus ~ label, 
+textarea:not(:placeholder-shown) ~ label {
     top: -10.5em;
     color: #69f0ae;
     font-size: 15px;
 }
 
-.button-div
-{
+.button-div {
     display: flex;
     justify-content: center;
 }
 
-button
-{
+button {
     padding: 2%;
     width: 50%;
     border: 1px solid;
@@ -100,8 +94,7 @@ button
     box-shadow: 0 0 10px #212121;
 }
 
-button:hover
-{
+button:hover {
     background-color: #424242;
     color: #69f0ae;
     cursor: pointer;
@@ -110,65 +103,54 @@ button:hover
 
 /* Media queries */
 
-@media screen and (max-width: 1200px)
-{
-    .form
-    {
+@media screen and (max-width: 1200px) {
+    .form {
         width: 70%;
     }
 }
 
-@media screen and (max-width: 680px)
-{
-    .form
-    {
+@media screen and (max-width: 680px) {
+    .form {
 		width: 90%;
     }
 }
 
-@media screen and (max-width: 500px)
-{
-	.title
-	{
+@media screen and (max-width: 500px) {
+	.title {
 		font-size: 40px;
 		padding-top: 6%;
 	}
 
-	.title-info
-	{
+	.title-info {
 		font-size: 13px;
 	}
 	
-	.form
-	{
+	.form {
 		padding: 6% 4%;
 		padding-top: 15%;
 	}
 
-	.input-group, .textarea-group
-    {
+	.input-group, .textarea-group {
 		padding: 3% 0;
 	}
 	
-	input, textarea
-	{
+	input, textarea {
 		font-size: 15px;
 	}
 
-	input:focus ~ label, input:not(:placeholder-shown) ~ label
-	{
+	input:focus ~ label, 
+    input:not(:placeholder-shown) ~ label {
 		top: -3.5em;
 		left: 0.1em;
 	}
 	
-	textarea:focus ~ label, textarea:not(:placeholder-shown) ~ label
-	{
+	textarea:focus ~ label, 
+    textarea:not(:placeholder-shown) ~ label {
 		top: -8.5em;
 		left: 0.2em;
     }
     
-    button
-    {
+    button {
         font-size: 15px;
     }
 }

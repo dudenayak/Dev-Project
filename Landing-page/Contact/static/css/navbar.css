@@ -1,69 +1,58 @@
-.navbar
-{
+.navbar {
     height: 10vh;
     display: flex;
     align-items: center;
 }
 
-.left-side
-{
+.left-side {
     display: flex;
     align-items: center;
     flex: 1;
 }
 
-.logo
-{
+.logo {
     padding: 0 2%;
 }
 
-.logo img
-{
+.logo img {
     height: 7vh;
 }
 
-ul
-{
+ul {
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 50%;
 }
 
-li
-{
+li {
     list-style: none;
 }
 
-.left-side li
-{
+.left-side li {
     height: 10vh;
     display: flex;
     align-items: center;
 }
 
-.right-side
-{
+.right-side {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     flex: 0.1;
 }
 
-.account
-{
+.account {
     display: flex;
     align-items: center;
     margin-right: 30%;
 }
 
-.account:hover
-{
+.account:hover {
     cursor: pointer;
 }
 
-.right-side img
-{
+.right-side img {
     height: 5vh;
     border-radius: 50px;
     margin-right: 20%;
@@ -77,8 +66,7 @@ li
     border-left: 4px solid transparent;
 }
 
-.dropdown
-{
+.dropdown {
     position: absolute;
     top: 8vh;
     right: 1vh;
@@ -91,8 +79,7 @@ li
     z-index: 2;
 }
 
-.user-name
-{
+.user-name {
     margin-bottom: 5%;
     padding: 2%;
     width: 180px;
@@ -100,27 +87,23 @@ li
     color: #757575;
 }
 
-.user-name:hover
-{
+.user-name:hover {
     cursor: default;
 }
 
-.dropdown ul
-{
+.dropdown ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 180px;
 }
 
-.dropdown li
-{
+.dropdown li {
     padding: 2%;
     width: 180px;
 }
 
-.dropdown li:hover
-{
+.dropdown li:hover {
     background-color: #424242;
     border-radius: 3px;
 }
@@ -128,36 +111,32 @@ li
 
 /* Media query */
 
-@media screen and (max-width: 1200px)
-{
-    .logo
-    {
+@media screen and (max-width: 1200px) {
+    .logo {
         flex: 1;
         display: flex;
         justify-content: center;
     }
 
-    .burger-menu
-    {
+    .burger-menu {
         flex: 0.1;
         padding-left: 2%;
     }
 
-    .burger-menu:hover
-    {
+    .burger-menu:hover {
         cursor: pointer;
     }
     
-    .line-1, .line-2, .line-3
-    {
+    .line-1, 
+    .line-2, 
+    .line-3 {
         width: 25px;
         height: 3px;
         background-color: #f5f5f5;
         margin: 5px;
     }
 
-    .burger-menu-dropdown
-	{
+    .burger-menu-dropdown {
 		display: flex;
 		flex-direction: column;
 		position: absolute;
@@ -169,22 +148,19 @@ li
 		background-color: rgba(0, 0, 0, 0.9); /* RGB of black */
 	}
 
-	.burger-menu-dropdown li
-	{
+	.burger-menu-dropdown li {
 		width: 90vw;
 		display: flex;
 		justify-content: center;
 	}
 
-	.burger-menu-dropdown li:hover
-	{
+	.burger-menu-dropdown li:hover {
 		color: #69f0ae;
 		background-color: rgba(66, 66, 66, 0.3);
 		border-radius: 8px;
 	}
 
-	.hide-burger-menu
-	{
+	.hide-burger-menu {
 		display: none;
 	}
 }
