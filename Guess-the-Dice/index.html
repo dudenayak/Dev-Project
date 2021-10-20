@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>
+    <title>Roll A Dice!</title>
+</head>
+
+<body>
+    <!-- Instructions Popup-->
+    <div class='popup'>
+        <h1 class="game-head">Roll The Dice!</h1>
+        <div class='instructions'>
+            <h1>Instructions</h1>
+            <br />
+            <p> - Click on "Start Round" to start the game.
+            <br/> - Select your guess from the given numbers within 10 seconds.
+            <br/> - The dice spins after 10 seconds.
+            <br /> - The player is awarded 10 points for every correct guess.
+            <br /><br />  
+            <a href='' class='close'>Close</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="dice-container">
+        <div class="dice">
+        <img src="./assets/1.png" alt="one.png" id="img">
+        <button id="btn" onclick="start()">Start Round</button>
+        </div>
+    </div>
+    
+    <div class="modal-overlay">
+        <div class="modal-container" id="correct">
+          <h3>The guess was <span>WRONG!</span></h3>
+          <p>Click on "Start game" for another try.</p>
+          <img src="./assets/wrong.jpeg" alt="">
+          <button class="close-btn">X</button>
+        </div>
+    </div>
+
+    <div class="container1">
+        <div id="game">
+                                    
+            <div class="hud">
+                <div class="hud-item">
+                    <p class="hud-prefix">SCORE</p>
+                    <h1 class="hud-main-text" id="score">0</h1>
+                </div>
+            </div>
+
+            <div class="hud2">
+                <div class="hud-item2">
+                    <p class="hud-prefix">SELECTED</p>
+                    <h1 class="hud-main-text" id="selectedvar">0</h1>
+                </div>
+            </div>
+
+            <div class="timer">
+                <p>The dice will change at </p>
+                <div id="countdown">
+                    <div id="countdown-number"></div>
+                    <svg>
+                      <circle r="18" cx="20" cy="20"></circle>
+                    </svg>
+                </div>
+                <p>: seconds.</p>
+            </div>
+
+            <div class="option-grid">
+                <div class="choice-container">
+                    <p class="choice-text" id="1">1</p>
+                </div>
+                <div class="choice-container">
+                    <p class="choice-text" id="2">2</p>
+                </div>
+                <div class="choice-container">
+                    <p class="choice-text" id="3">3</p>
+                </div>
+                <div class="choice-container">
+                    <p class="choice-text" id="4">4</p>
+                </div>
+                <div class="choice-container">
+                    <p class="choice-text" id="5">5</p>
+                </div>
+                <div class="choice-container">
+                    <p class="choice-text" id="6">6</p>
+                </div>
+            </div>
+                 
+
+        </div>
+    </div>
+    <script type='text/javascript'>
+        $(function(){
+        var overlay = $('<div id="overlay"></div>');
+        overlay.show();
+        overlay.appendTo(document.body);
+        $('.popup').show();
+        $('.close').click(function(){
+        $('.popup').hide();
+        overlay.appendTo(document.body).remove();
+        return false;
+        });
+            
+        $('.x').click(function(){
+        $('.popup').hide();
+        overlay.appendTo(document.body).remove();
+        return false;
+        });
+        });
+        </script>
+    <script src="app.js"></script>
+</body>
+</html>
