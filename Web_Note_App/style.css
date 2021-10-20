@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body {
+    background-color: #eee;
+}
+h1{
+    font-family: 'Lobster', cursive;
+    color: #7CA6EB;
+}
+.card{
+    background-color: rgb(230, 230, 230);
+}
+#addBtn{
+    display: block;
+    margin: auto;
+}
+.navbar{
+    background: rgb(110, 107, 107);
+}

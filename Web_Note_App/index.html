@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do=list</title>
+    <!-- --------------bootstrap css--------------------- -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- -------------/bootstrap css--------------------------- -->
+    <!-- ----------------------css add--------------------------- -->
+    <link rel="stylesheet" href="style.css">
+    <!-- ----------------------/css add--------------------------- -->
+</head>
+
+<body>
+    <!-- ---------------bootstrap navbar------------------- -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">To-Do-List-Creator</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                </ul>
+                <form class="d-flex">
+                    <input id="searchTxt" class="form-control me-2" type="search" placeholder="Search..."
+                        aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- ---------------/bootstrap navbar------------------- -->
+    <!-- ---------------container---------------------------- -->
+    <div class="container my-3">
+        <h1>Just Create it</h1>
+        <!--------------------- bootstrap written card------------------ -->
+        <div class="card">
+            <div class="card-body">
+                <!-- <h5 class="card-title">Card title</h5> -->
+                <input id="addTitle" type="text" class="form-control my-2" placeholder="Title...">
+                <textarea id="addTxt" class="form-control my-2" rows="4" placeholder="Write..."></textarea>
+                <button id="addBtn" class="btn btn-primary">Add Note</button>
+            </div>
+        </div>
+        <!--------------------- /bootstrap written card------------------ -->
+        <hr>
+        <h2>Your Notes</h2>
+        <hr>
+        <!-- ---------------------bootstrap added card------------------- -->
+        <div id="notes" class="row container-fluid">
+            <!-- <div class="card row mx-3 my-3" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text"></p>
+                    <button class="btn btn-primary">Go somewhere</button>
+                </div>
+            </div> -->
+        </div>
+        <!-- ---------------------/bootstrap added card------------------- -->
+    </div>
+    <!-- ---------------/container---------------------------- -->
+    <!-- --------------bootstrap js--------------------- -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
+    <!-- -----------------/bootstrap js---------------------- -->
+    <!-- -----------------script.js add------------------------- -->
+    <script src="script.js"></script>
+    <!-- -----------------/script.js add------------------------- -->
+</body>
+
+</html>
