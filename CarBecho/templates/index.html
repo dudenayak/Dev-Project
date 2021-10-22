@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarPredictor</title>
+</head>
+<style>
+  @import url(https://fonts.googleapis.com/css?family=Chewy);
+      $primary: #22184c;
+
+  *,*:before,*:after {
+  box-sizing: border-box;
+  }
+
+  html {
+  font-family: "Work Sans", sans-serif;
+  color: #333;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 300;
+  background-color: #ccfcd9;
+  }
+
+  body {
+  margin: 0;
+  padding: 0;
+  background: #d3f2f0;
+  }
+
+  .header {
+  min-height: 100px;
+  height: 30vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+  .header {
+  background-color: #22184c;
+  background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.shutterstock.com%2Fimage-photo%2Fcars-sale-stock-row-car-dealer-1193642983&psig=AOvVaw1qKL2lYzKRIV1gC01VSq5f&ust=1601298449670000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNj9q4q0iewCFQAAAAAdAAAAABAI');
+  color: #ddf;
+  }
+
+  h1 {
+  font-size: 4rem;
+  font-family: 'Chewy';
+  float: left;
+  font-weight: 300;
+  margin: 0;
+  opacity: .5;
+  }
+
+  .canvas-wrap {
+  max-width: 100%;
+  overflow: hidden;
+  position: absolute;
+  transform: translateY(-50%);
+  }
+
+   canvas {
+  display: block;
+  }
+
+  .form-style-10{
+	width:450px;
+	padding:30px;
+	margin:0 auto;
+	background: #FFF;
+	border-radius: 10px;
+	-webkit-border-radius:10px;
+  margin-top: -60px;
+	-moz-border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+  }
+
+  .form-style-10 h1{
+	background: #2A88AD;
+	padding: 20px 30px 30px 230px;
+	margin: -30px -30px 30px -30px;
+	border-radius: 10px 10px 0 0;
+	-webkit-border-radius: 10px 10px 0 0;
+	-moz-border-radius: 10px 10px 0 0;
+	color: #fff;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+  text-align: center;
+	font: normal 30px 'Bitter', serif;
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	border: 1px solid #257C9E;
+}
+.form-style-10 h1 span{
+	display: block;
+	margin-top: 12px;
+	font: 13px Arial, Helvetica, sans-serif;
+}
+
+.form-style-10 .section{
+	font: normal 20px 'Bitter', serif;
+	color: #2A88AD;
+	margin-bottom: 5px;
+  margin-left: 15px;
+}
+.form-style-10 .section span {
+	background: #2A88AD;
+	padding: 5px 10px 5px 10px;
+	position: absolute;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border: 4px solid #fff;
+	font-size: 14px;
+	margin-left: -40px;
+	color: #fff;
+	margin-top: -3px;
+}
+
+.form-style-10 .inner-wrap{
+	padding: 30px;
+	background: #F8F8F8;
+	border-radius: 6px;
+	margin-bottom: 15px;
+}
+
+.form-style-10 label{
+	display: block;
+	font: 13px Arial, Helvetica, sans-serif;
+	color: #888;
+	margin-bottom: 15px;
+}
+
+.box select{
+  background: #2A88AD;
+  color: #fff;
+  padding: 10px;
+  width: 280px;
+  height: 40px;
+  border: none;
+  font-size: 15px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  border-radius:14px;
+  -webkit-appearance: button;
+  outline: none;
+}
+
+.box:before{
+  content: '\f358';
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  color: #fff;
+  font-size: 28px;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 40px;
+  background: #007ce0;
+}
+
+.box:hover:before{
+  background: #0472ca;
+}
+
+    /* #research {
+        font-size: 18px;
+        width: 100px;
+        height: 23px;
+        top: 23px;
+    }
+
+    #box {
+        border-radius: 60px;
+        border-color: 45px;
+        border-style: solid;
+        font-family: cursive;
+        text-align: center;
+        background-color: rgb(168, 131, 61);
+        font-size: medium;
+        position: absolute;
+        width: 700px;
+        bottom: 9%;
+        height: 850px;
+        right: 30%;
+        padding: 0px;
+        margin: 0px;
+        font-size: 14px;
+    }
+    #fuel {
+        width: 83px;
+        height: 43px;
+        text-align: center;
+        border-radius: 14px;
+        font-size: 20px;
+    }
+
+    #fuel:hover {
+        background-color: coral;
+    }
+
+    #research {
+        width: 99px;
+        height: 43px;
+        text-align: center;
+        border-radius: 14px;
+        font-size: 18px;
+    }
+
+    #research:hover {
+        background-color: coral;
+    }
+
+    #resea {
+        width: 99px;
+        height: 43px;
+        text-align: center;
+        border-radius: 14px;
+        font-size: 18px;
+    }
+
+    #resea:hover {
+        background-color: coral;
+    }
+
+    #sub {
+        width: 120px;
+        height: 43px;
+        text-align: center;
+        border-radius: 14px;
+        font-size: 18px;
+    }
+
+    #sub:hover {
+        background-color: darkcyan;
+    } */
+
+    #first {
+        border-radius: 14px;
+        height: 25px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    #second {
+        border-radius: 14px;
+        height: 25px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    #third {
+        border-radius: 14px;
+        height: 25px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    #fourth {
+        border-radius: 14px;
+        height: 25px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    button{
+      border: 1px solid #3498db;
+      background: none;
+      font-family: "montserrat";
+      font-size: 24px;
+      cursor: pointer;
+      padding: 10px 20px;
+      transition: 0.8s;
+    }
+
+    button:hover{
+      color: #3498db;
+    }
+
+    button::before{
+      content:"";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 0%;
+      background: #3498db;
+      z-index: -1;
+      transition: 0.8s;
+    }
+
+    button::before{
+      top: 0;
+      border-radius: 0 0 50% 50%;
+    }
+
+    .center{
+      position: absolute;
+      height: auto;
+      width: 100%;
+      top: 50%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+      font-family: sans-serif;
+      user-select: none;
+      background: #eaf29d;
+      border-radius: 10px;
+      margin-top: 10px;
+      align-items: center;
+    }
+
+    .center h1{
+      font-size: 30px;
+      font-weight: bold;
+      width: 885px;
+      margin-top: 50px;
+      margin-left: 1000px;
+      font-family: Georgia;
+      color: #646652;
+    }
+
+    .wrapper h1{
+      font-size: 56px;
+      font-family: 'Verdana';
+      text-align: center;
+      font-weight: bold;
+      color: blue;
+      margin-bottom: 25px;
+      margin-left: 25%;
+}
+    .wrapper1 h2{
+        font-size: 30px;
+        font-family: 'Palatino';
+        text-align: center;
+        font-weight: bold;
+        color: #3498db;
+        margin-left: 0;
+        margin-top: 40px;
+    }
+</style>
+
+<body>
+  <div class="header">
+    <h1 class="head">Car Price Predictor</h1>
+  </div>
+  <script type="text/javascript">
+  (function(){
+    "use strict";
+
+var cvs,ctx;
+var nodes = 6;
+var waves = [];
+var waveHeight = 60;
+var colours = ["#f80000","#00f800","#0000f8"];
+
+// Initiator function
+function init() {
+  cvs = document.getElementById("canvas");
+  ctx = cvs.getContext("2d");
+  resizeCanvas(cvs);
+
+  for (var i = 0; i < 3; i++) {
+    waves.push(new wave(colours[i], 1, nodes));
+  }
+
+  update();
+}
+
+function update() {
+  var fill = window.getComputedStyle(document.querySelector(".header"),null).getPropertyValue("background-color");
+  ctx.fillStyle = fill;
+  ctx.globalCompositeOperation = "source-over";
+  ctx.fillRect(0,0,cvs.width,cvs.height);
+  ctx.globalCompositeOperation = "screen";
+  for (var i = 0; i < waves.length; i++) {
+    for (var j = 0; j < waves[i].nodes.length; j++) {
+      bounce(waves[i].nodes[j]);
+    }
+    drawWave(waves[i]);
+  }
+  ctx.fillStyle = fill;
+
+  requestAnimationFrame(update);
+}
+
+function wave(colour, lambda, nodes) {
+
+  this.colour = colour;
+  this.lambda = lambda;
+  this.nodes = [];
+  var tick = 1;
+
+  for (var i = 0; i <= nodes+2; i++) {
+    var temp = [(i-1) * cvs.width / nodes, 0, Math.random()*200, .3];
+    this.nodes.push(temp);
+    console.log(temp);
+  }
+  console.log(this.nodes);
+}
+
+function bounce(nodeArr) {
+  nodeArr[1] = waveHeight/2*Math.sin(nodeArr[2]/20)+cvs.height/2;
+  nodeArr[2] = nodeArr[2] + nodeArr[3];
+
+}
+
+function drawWave (obj) {
+
+  var diff = function(a,b) {
+    return (b - a)/2 + a;
+  }
+
+  ctx.fillStyle = obj.colour;
+  ctx.beginPath();
+  ctx.moveTo(0,cvs.height);
+  ctx.lineTo(obj.nodes[0][0],obj.nodes[0][1]);
+
+  for (var i = 0; i < obj.nodes.length; i++) {
+
+    if (obj.nodes[i+1]) {
+      ctx.quadraticCurveTo(
+        obj.nodes[i][0],obj.nodes[i][1],
+        diff(obj.nodes[i][0],obj.nodes[i+1][0]),diff(obj.nodes[i][1],obj.nodes[i+1][1])
+      );
+    }
+    else {
+      ctx.lineTo(obj.nodes[i][0],obj.nodes[i][1]);
+      ctx.lineTo(cvs.width,cvs.height);
+    }
+  }
+  ctx.closePath();
+  ctx.fill();
+}
+
+function drawNodes (array) {
+  ctx.strokeStyle = "#888";
+
+  for (var i = 0; i < array.length; i++) {
+    ctx.beginPath();
+    ctx.arc(array[i][0],array[i][1],4,0,2*Math.PI);
+    ctx.closePath();
+    ctx.stroke();
+  }
+
+}
+
+function drawLine (array) {
+  ctx.strokeStyle = "#888";
+
+  for (var i = 0; i < array.length; i++) {
+
+    if (array[i+1]) {
+      ctx.lineTo(array[i+1][0],array[i+1][1]);
+    }
+  }
+
+  ctx.stroke();
+}
+
+function resizeCanvas(canvas,width,height) {
+
+  if (width && height) {
+    canvas.width = width;
+    canvas.height = height;
+  }
+  else {
+
+    if (window.innerWidth > 1920) {
+      canvas.width = window.innerWidth;
+    }
+    else {
+      canvas.width = 1920;
+    }
+
+    canvas.height = waveHeight;
+  }
+}
+
+document.addEventListener("DOMContentLoaded",init,false);
+})();
+  </script>
+  <div class="canvas-wrap">
+      <canvas id="canvas"></canvas>
+  </div>
+  <!-- <div class="">
+    <img src="https://lh3.googleusercontent.com/proxy/wAZ32PmM7JY0EvGIitnfGoWpzubZYipk0yGkKDx6pXOYavHURJh0RqwPJIYnG7nLFUh5JlZuB-JLxHkQQz02og_AGvOFsrFjdy9b09ZnWi8IJ6-uCPoPxTxz2wdK" alt="" style="float:left; margin-left:10px; margin-top: 40px;height: 200px; width:300px;">
+  </div> -->
+  <!-- <div class="wrapper1"> -->
+  <!-- <img src="https://www.hyundai.com/content/dam/hyundai/in/en/images/hyundai-story/testdriverangeshotcreative.jpg" alt=""> -->
+   <!-- <h2>Find fair market price of used cars through its basic feature details. While buying a used car, it is very important to understand its fair evaluaion at that point of time. Through CarPricePredictor, you can get pricing of any pre-owned car prodcued by any manufacturer.</h2>
+   <br>
+ </div> -->
+<br><br><br><br>
+    <div style="color:blue;">
+        <form action="{{ url_for('predict')}}" method="post" class="form-style-10">
+            <h1>Value Predictor<span>Fill in the details to find out the selling price</span></h1>
+              <div class="section"><span>1</span>Year</div>
+                <div class="inner-wrap">
+                    <label>How old is the car? (in years)</label><input id="first" name="Year" type="number ">
+                </div>
+              <div class="section"><span>2</span>Showroom Price</div>
+                <div class="inner-wrap">
+                      <label>What is the Showroom Price? (in Lakhs)</label><input id="second" name="Present_Price" required="required">
+                </div>
+              <div class="section"><span>3</span>Distance Travelled</div>
+                <div class="inner-wrap">
+                      <label>How Many Kilometers Driven?</label><input id="third" name="Kms_Driven" required="required">
+                </div>
+              <div class="section"><span>4</span>Owners</div>
+                <div class="inner-wrap">
+                      <label>How many owners previously had this car(0,1 or 3)?</label><input id="fourth" name="Owner" required="required">
+                </div>
+              <div class="section"><span>5</span>Fuel Type</div>
+                <div class="inner-wrap">
+                      <label>Please select (Petrol, Diesel or CNG)</label>
+                    <div class="box">
+                      <select name="Fuel_Type_Petrol" id="fuel" required="required">
+                          <option value="Petrol">Petrol</option>
+                          <option value="Diesel">Diesel</option>
+                          <option value="Diesel">CNG</option>
+                      </select>
+                    </div>
+                </div>
+
+              <div class="section"><span>6</span>Seller</div>
+                <div class="inner-wrap">
+                      <label>Are you A Dealer or Individual?</label>
+                      <div class="box">
+                      <select name="Seller_Type_Individual" id="resea" required="required">
+                          <option value="Dealer">Dealer</option>
+                          <option value="Individual">Individual</option>
+                      </select>
+                    </div>
+                </div>
+
+              <div class="section"><span>7</span>Transmission Types</div>
+                <div class="inner-wrap">
+                      <label>Please select the transmission of the car.</label>
+                    <div class="box">
+                      <select name="Transmission_Mannual" id="research" required="required">
+                          <option value="Mannual">Manual Car</option>
+                          <option value="Automatic">Automatic Car</option>
+                      </select>
+                    </div>
+                </div>
+                <br><br>
+            <div class="what" style="margin-left:85px;"><button id="sub" type="submit">Calculate the Selling Price</button></div>
+            <br>
+
+
+
+
+        </form>
+
+
+        <div class="wrapper">
+        <br><br><h1>{{ prediction_text }}</h1>
+        </div>
+    </div>
+
+</body>
+
+</html>
