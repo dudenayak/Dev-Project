@@ -1,14 +1,14 @@
-:root{
-    --primary: #17265D;
-    --secondary: #6B5B80;
-    --black: #000;
-    --white: #fff;
-}
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+:root{
+    --primary: #17265D;
+    --secondary: #6B5B80;
+    --black: #000;
+    --white: #fff;
 }
 
 .line{
