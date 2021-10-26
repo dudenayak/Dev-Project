@@ -22,13 +22,12 @@ body{
     display: inline-block;
     font-size: 40px;
     border-bottom: 5px solid purple;
-    margin-bottom: 15px;
+    margin-bottom: 7px;
     padding: 13px 0;
     font-family: 'Heebo', sans-serif;
 }
 
 .box{
-    width: 100%;
     border-bottom: 2px solid purple;
     margin: 24px 0;
 }

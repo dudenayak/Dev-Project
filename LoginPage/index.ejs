@@ -4,21 +4,28 @@
     <!-- Place your kit's code here -->
     <script src="https://kit.fontawesome.com/a54ff0b1da.js" crossorigin="anonymous"></script>
     <title>Login Form Template</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="LoginPage/css/style.css">
+   
   </head>
 
   <body>
+    <form action="" method="post">
     <div class="container">
         <h1>Log In</h1>
         <div class="box">
+          <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; margin-bottom: 1rem;">
+            <%= err %>
+          </p>
             <i class="fa fa-envelope"></i>
+            
             <input type="email" name="email" id="email" placeholder="Enter Your Email">
         </div>
         <div class="box">
             <i class="fa fa-key"></i>
-            <input type="password" name="password" id="password" placeholder="Enter Your Password">
+            <input type="password" name="pass" id="password" placeholder="Enter Your Password">
         </div>
-        <button class="btn">Log In</button>
+        <button type="submit" class="btn">Log In</button>
     </div>
+  </form>
   </body>
 </html>

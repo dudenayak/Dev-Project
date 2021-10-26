@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration Form Template</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="RegistrationForm/css/style.css" />
     <!-- Bootstrap 5 -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -23,17 +23,19 @@
     />
   </head>
   <body>
+    
     <div id="main">
+   
       <div class="r_form">
         <div class="img_box">
-          <img src="./images/img1.jpg" alt="Illustration" class="i_img" />
+          <img src="RegistrationForm/images/img1.jpg" alt="Illustration" class="i_img" />
         </div>
         <div class="form_box">
           <div class="form_heading">
             <h1>Register</h1>
             <div class="line"></div>
           </div>
-          <form>
+          <form action="" method="post">
               <div class="input_group my-3">
                 <i class="fa-solid fa-user"></i>
                 <input type="text" name="full_name" id="full_name" placeholder="Full Name" class="form_input">
@@ -50,15 +52,19 @@
                 <i class="fa-solid fa-key"></i>
                 <input type="password" name="pass" id="pass" placeholder="Password" minlength="8" class="form_input">
               </div>
-              <div class="input_group my-3">
+              <div class="input_group my-3 mb-0">
                 <i class="fa-solid fa-key"></i>
                 <input type="password" name="c_pass" id="c_pass" placeholder="Confirm Password" minlength="8" class="form_input">
+                
               </div>
+              <b class="mb-0 mt-0 text-danger ml-3 text-justify"><%= err %></b>
               <button type="submit" class="form_cta mt-2">Register</button>
           </form>
         </div>
       </div>
+  
     </div>
+    
     <!-- Bootstrap 5 -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
