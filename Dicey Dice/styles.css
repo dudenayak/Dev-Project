@@ -1,0 +1,80 @@
+body
+{
+  margin:0 auto;
+  width: 100%;
+  font-family: 'Klee One', cursive;
+  background-color: rgb(66, 58, 66);
+  color: white;
+}
+
+.container
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1
+{
+  color:rgb(215, 250, 250);;
+  font-weight: 600;
+  font-size: 4rem;
+  text-align: center;
+}
+
+h3
+{
+  margin-top: -45px;
+  text-align: center;
+}
+
+#btn
+{
+  margin-top: 20px;
+  padding: 12px 30px 12px 30px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+#btn:hover
+{
+  background-color: rgb(216, 216, 216);
+  cursor: pointer;
+}
+
+.dice-container
+{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.player
+{
+  float:left;
+  text-align: center;
+  font-size: 2rem;
+  margin: 20px 40px 20px 40px;
+}
+
+.player1
+{
+  margin-bottom:20px;
+}
+
+.player2
+{
+  margin-bottom:20px;
+}
+
+#die1
+{
+  width: 200px;
+}
+
+#die2
+{
+  width: 200px;
+}
