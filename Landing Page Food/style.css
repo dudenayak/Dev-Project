@@ -1,0 +1,251 @@
+/* CSS RESET */
+*
+{
+ margin: 0;
+ padding: 0;
+}
+
+/* Navigation Bar */
+#navbar
+{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+}
+#logo
+{
+    height: 59px;
+    margin: 3px 6px;
+    padding: 10px;
+}
+#logo>img
+{
+    width: 80px;
+    margin: -5px;
+}
+#navbar ul
+{
+    display: flex;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+#navbar::before
+{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+#navbar ul li
+{
+    /* color: white; */
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a
+{
+    display: block;
+    color: white;
+   padding: 26px 22px;
+   border-radius: 50px;
+   text-decoration: none;
+}
+#navbar ul li a:hover
+{
+    color: black;
+    background-color: white;  
+}
+
+/* Home Section */
+
+#home
+{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 630px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before
+{
+    content: "";
+    position: absolute;
+    background: url(/foodOrder/pictures/pic1.jpg) no-repeat center center/cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+#home h1
+{
+   color: white;
+   text-align: center;
+   font-family: 'Bree Serif', serif;
+}
+
+#home p
+{
+   color: white;
+   text-align: center;
+   font-size: 1.5rem;
+   font-family: 'Bree Serif', serif;
+}
+/* Services Section */
+#services
+{
+    margin: 8px;
+    display: flex;
+}
+#services .box
+{
+  border: 2px solid rgb(48, 5, 5);
+  padding: 15px;
+  margin: 20px 26px;
+  border-radius: 28px;
+  background: #faf2f2;
+}
+#services .box:hover
+{
+    border-color:grey;
+}
+#services .box img
+{
+    height: 86px;
+    margin: -21px 134px;
+    display: block;
+}
+.services-container
+{
+    background-color: cornsilk;
+    margin: -85px -7px -9px -4px;
+}
+.services-container p
+{
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+/* Clients Section */
+
+#client-section
+{
+    height: 334px;
+}
+#clients
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -40px -1px 3px 81px;
+}
+#clients img
+{
+    height: 124px;
+    margin: 16px 21px;
+}
+.client-item
+{
+    padding: 34px;
+}
+#client-section::before
+{
+    content:"";
+    position: absolute;
+    background: url(/foodOrder/pictures/pexels-ella-olsson-1640777.jpg);
+    width: 100%;
+    height: 54%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+footer
+{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+    opacity: 0.8;
+
+}
+
+/* Utility Classes */
+.h-primary
+{
+    font-size: 3.4rem;
+    padding: 12px;
+    font-family: 'Bree Serif', serif;
+}
+.h-secondary
+{
+    font-size: 1.8rem;
+    padding: 12px;
+    font-family: 'Bree Serif', serif;
+}
+.btn
+{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.3rem;
+    border-radius: 10px;
+}
+.btn:hover
+{
+    background-color: tomato;
+    cursor: pointer;
+
+}
+
+.center
+{
+    text-align: center;
+}
+/* Contact Section */
+#contact
+{
+    position: relative;
+}
+#contact::before
+{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.7;
+  background: url(/foodOrder/pictures/pexels-jéshoots-4831.jpg) no-repeat center center/cover;
+}
+#contact-box
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, #contact-box textarea
+{
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 9px;
+  font-size: 1.1rem;
+}
+#contact-box form
+{
+    width: 40%;
+}
+#contact-box label
+{
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+}
