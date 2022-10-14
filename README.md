@@ -1,4 +1,4 @@
-![](/logo/hacktoberfest-2021.png)  
+![](/logo/hacktoberfest-2022.png)  
 <h1 align="center"> Hacktoberfest 2021 🎉</h1>
 
 <div align="center">
