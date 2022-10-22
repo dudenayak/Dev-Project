@@ -1,0 +1,31 @@
+Html Webpack Plugin:
+<pre>
+  Error: Parse Error: <link font-family: "Montserrat", sans-serif;
+      href="https://fonts.googleapis.com/css?family=McLaren|Montserrat&display=swap"
+      rel="stylesheet" />
+      <link rel="stylesheet" href="styles.css" />
+     <link id="external-css" rel="stylesheet" type="text/css" href="https://fonts.googlea  pis.com/css?family=Montserrat&display=swap" media="all">
+  </head>
+    <body>
+      <div id="root"></div>
+      <script src="../src/index.js" type="text/jsx"></script>
+    <script>!function(e){function t(t){for(var n,i,l=t[0],p=t[1],a=t[2],f=0,s=[];f<l.leng  th;f++)i=l[f],Object.prototype.hasOwnProperty.call(o,i)&&o[i]&&s.push(o[i][0]),o[i]=0;f  or(n in p)Object.prototype.hasOwnProperty.call(p,n)&&(e[n]=p[n]);for(c&&c(t);s.length;)  s.shift()();return u.push.apply(u,a||[]),r()}function r(){for(var e,t=0;t<u.length;t++)  {for(var r=u[t],n=!0,l=1;l<r.length;l++){var p=r[l];0!==o[p]&&(n=!1)}n&&(u.splice(t--,1  ),e=i(i.s=r[0]))}return e}var n={},o={1:0},u=[];function i(t){if(n[t])return n[t].expor  ts;var r=n[t]={i:t,l:!1,exports:{}};return e[t].call(r.exports,r,r.exports,i),r.l=!0,r.  exports}i.m=e,i.c=n,i.d=function(e,t,r){i.o(e,t)||Object.defineProperty(e,t,{enumerable  :!0,get:r})},i.r=function(e){"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.de  fineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule  ",{value:!0})},i.t=function(e,t){if(1&t&&(e=i(e)),8&t)return e;if(4&t&&"object"===typeo  f e&&e&&e.__esModule)return e;var r=Object.create(null);if(i.r(r),Object.defineProperty  (r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var n in e)i.d(r,n,fu  nction(t){return e[t]}.bind(null,n));return r},i.n=function(e){var t=e&&e.__esModule?fu  nction(){return e.default}:function(){return e};return i.d(t,"a",t),t},i.o=function(e,t  ){return Object.prototype.hasOwnProperty.call(e,t)},i.p="/";var l=this["webpackJsonpusi  ng-pre-built-react-components"]=this["webpackJsonpusing-pre-built-react-components"]||[  ],p=l.push.bind(l);l.push=t,l=l.slice();for(var a=0;a<l.length;a++)t(l[a]);var c=p;r()}  ([]);
+  //# sourceMappingURL=runtime-main.aa743321.js.map</script><script src="/static/js/2.c80  056b5.chunk.js"></script><script src="/static/js/main.e50a2351.chunk.js"></script></bod  y>
+  </html>
+  
+  - htmlparser.js:240 new HTMLParser
+    [Notes-Keeper]/[html-minifier]/src/htmlparser.js:240:13
+  
+  - htmlminifier.js:966 minify
+    [Notes-Keeper]/[html-minifier]/src/htmlminifier.js:966:3
+  
+  - htmlminifier.js:1326 Object.exports.minify
+    [Notes-Keeper]/[html-minifier]/src/htmlminifier.js:1326:16
+  
+  - index.js:437 HtmlWebpackPlugin.postProcessHtml
+    [Notes-Keeper]/[html-webpack-plugin]/index.js:437:34
+  
+  - index.js:270 
+    [Notes-Keeper]/[html-webpack-plugin]/index.js:270:25
+  
+</pre>
